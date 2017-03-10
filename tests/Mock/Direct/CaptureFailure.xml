@@ -1,0 +1,13 @@
+<doCaptureResponse xmlns="http://impl.ws.payline.experian.com" xmlns:obj="http://obj.ws.payline.experian.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  <result>
+    <obj:code>02301</obj:code>
+    <obj:shortMessage>ERROR</obj:shortMessage>
+    <obj:longMessage>Transaction ID  is invalid.</obj:longMessage>
+</result>
+    <transaction>
+        <obj:id xsi:nil="true"/>
+        <obj:date/>
+        <obj:isDuplicated xsi:nil="true"/>
+        <obj:isPossibleFraud xsi:nil="true"/>
+    </transaction>
+    <reAuthorization xsi:nil="true"/>
+</doCaptureResponse>

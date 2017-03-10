@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doRefundResponse xmlns="http://impl.ws.payline.experian.com" xmlns:obj="http://obj.ws.payline.experian.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  <result>
+    <obj:code>02301</obj:code>
+    <obj:shortMessage>ERROR</obj:shortMessage>
+    <obj:longMessage>Transaction ID  is invalid.</obj:longMessage>
+</result>
+    <transaction>
+        <obj:id>PV409031725231968</obj:id>
+        <obj:date>09/03/17 16:53:23</obj:date>
+        <obj:isDuplicated xsi:nil="true"/>
+        <obj:isPossibleFraud xsi:nil="true"/>
+    </transaction>
+</doRefundResponse>

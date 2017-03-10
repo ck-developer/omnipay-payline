@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<getWebPaymentDetailsResponse xmlns="http://impl.ws.payline.experian.com" xmlns:obj="http://obj.ws.payline.experian.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <result>
+    <obj:code>00000</obj:code>
+    <obj:shortMessage>Transaction approved</obj:shortMessage>
+    <obj:longMessage>Transaction approved</obj:longMessage>
+  </result>
+  <transaction>
+    <obj:id>26201170909259</obj:id>
+    <obj:date>19/07/2016 17:09</obj:date>
+    <obj:isDuplicated>0</obj:isDuplicated>
+    <obj:isPossibleFraud>0</obj:isPossibleFraud>
+    <obj:fraudResult/>
+    <obj:explanation/>
+    <obj:threeDSecure>N</obj:threeDSecure>
+    <obj:score>0</obj:score>
+  </transaction>
+  <payment>
+    <obj:amount>1000</obj:amount>
+    <obj:currency>978</obj:currency>
+    <obj:action>100</obj:action>
+    <obj:mode>CPT</obj:mode>
+    <obj:contractNumber>0383653</obj:contractNumber>
+    <obj:differedActionDate/>
+  </payment>
+  <authorization>
+    <obj:number>A55A</obj:number>
+    <obj:date>19/07/2016 17:09</obj:date>
+  </authorization>
+  <privateDataList/>
+  <authentication3DSecure>
+    <obj:md>2nXYwf2AN7xAi7RiPC2m</obj:md>
+    <obj:xid>Mm5YWXdmMkFON3hBaTdSaVBDMm0=</obj:xid>
+    <obj:eci/>
+    <obj:cavv xsi:nil="true"/>
+    <obj:cavvAlgorithm xsi:nil="true"/>
+    <obj:vadsResult xsi:nil="true"/>
+  </authentication3DSecure>
+</getWebPaymentDetailsResponse>

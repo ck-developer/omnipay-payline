@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doCaptureResponse xmlns="http://impl.ws.payline.experian.com" xmlns:obj="http://obj.ws.payline.experian.com">  <result>
+    <obj:code>00000</obj:code>
+    <obj:shortMessage>ACCEPTED</obj:shortMessage>
+    <obj:longMessage>Transaction approved</obj:longMessage>
+  </result>
+  <transaction>
+    <obj:id>27067235513483</obj:id>
+    <obj:date>08/03/2017 23:55</obj:date>
+    <obj:isDuplicated>0</obj:isDuplicated>
+    <obj:isPossibleFraud>0</obj:isPossibleFraud>
+  </transaction>
+  <reAuthorization>0</reAuthorization>
+</doCaptureResponse>

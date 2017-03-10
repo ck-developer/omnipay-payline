@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doAuthorizationResponse xmlns="http://impl.ws.payline.experian.com" xmlns:obj="http://obj.ws.payline.experian.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  <result>
+    <obj:code>002718</obj:code>
+    <obj:shortMessage>ACCEPTED</obj:shortMessage>
+    <obj:longMessage>Transaction approved</obj:longMessage>
+  </result>
+  <transaction>
+    <obj:id>27067175816178</obj:id>
+    <obj:date>08/03/17 17:58:16</obj:date>
+    <obj:isDuplicated>0</obj:isDuplicated>
+    <obj:isPossibleFraud>0</obj:isPossibleFraud>
+    <obj:fraudResult/>
+    <obj:explanation/>
+    <obj:threeDSecure>N</obj:threeDSecure>
+    <obj:score xsi:nil="true"/>
+  </transaction>
+  <authorization>
+    <obj:number>A55A</obj:number>
+    <obj:date>08/03/17 17:58:16</obj:date>
+  </authorization>
+  <card>
+    <obj:number>497010XXXXXX5670</obj:number>
+    <obj:type>CB</obj:type>
+    <obj:expirationDate>0119</obj:expirationDate>
+  </card>
+  <extendedCard>
+    <obj:country>FRA</obj:country>
+    <obj:isCvd/>
+    <obj:bank/>
+    <obj:type>VISA</obj:type>
+    <obj:network>VISA</obj:network>
+    <obj:product>Visa Business</obj:product>
+  </extendedCard>
+  <contractNumber>1234567</contractNumber>
+</doAuthorizationResponse>

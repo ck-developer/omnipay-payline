@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doWebPaymentResponse xmlns="http://impl.ws.payline.experian.com" xmlns:obj="http://obj.ws.payline.experian.com">
+  <result>
+    <obj:code>00000</obj:code>
+    <obj:shortMessage>Transaction approved</obj:shortMessage>
+    <obj:longMessage>Transaction approved</obj:longMessage>
+  </result>
+  <token>2dIcC8Qcy86fOD2Cw5471468940895426</token>
+  <redirectURL>https://homologation-webpayment.payline.com/webpayment/step2.do?reqCode=prepareStep2&amp;token=2dIcC8Qcy86fOD2Cw5471468940895426</redirectURL>
+</doWebPaymentResponse>
