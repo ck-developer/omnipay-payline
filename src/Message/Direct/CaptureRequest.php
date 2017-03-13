@@ -33,7 +33,7 @@ class CaptureRequest extends AuthorizeRequest
         $data['payment'] = array(
             'amount' => $this->getAmountInteger(),
             'currency' => $this->getCurrencyNumeric(),
-            'action' => 201,
+            'action' => 101,
             'mode' => $this->getPaymentMethod(),
         );
 

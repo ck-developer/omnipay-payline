@@ -41,4 +41,9 @@ abstract class AbstractResponse extends OmnipayAbstractResponse
     {
         return $this->data->result->longMessage;
     }
+
+    public function getTransactionReference()
+    {
+        return $this->request->getTransactionReference();
+    }
 }
