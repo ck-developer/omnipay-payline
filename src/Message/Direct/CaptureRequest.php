@@ -34,7 +34,7 @@ class CaptureRequest extends AuthorizeRequest
             'amount' => $this->getAmountInteger(),
             'currency' => $this->getCurrencyNumeric(),
             'action' => 101,
-            'mode' => $this->getPaymentMethod(),
+            'mode' => $this->getPaymentMode() ?: 'CPT',
         );
 
         if ($this->getContractNumber()) {

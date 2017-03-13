@@ -44,6 +44,6 @@ abstract class AbstractResponse extends OmnipayAbstractResponse
 
     public function getTransactionReference()
     {
-        return $this->request->getTransactionReference();
+        return $this->data->transaction->id;
     }
 }
