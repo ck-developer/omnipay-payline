@@ -41,6 +41,16 @@ class DirectGateway extends AbstractGateway
     /**
      * @param array $parameters
      *
+     * @return \Omnipay\Payline\Message\Direct\PurchaseRequest
+     */
+    public function purchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Payline\Message\Direct\PurchaseRequest', $parameters);
+    }
+
+    /**
+     * @param array $parameters
+     *
      * @return \Omnipay\Payline\Message\Direct\CaptureRequest
      */
     public function capture(array $parameters = array())

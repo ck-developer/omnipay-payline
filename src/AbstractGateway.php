@@ -49,7 +49,7 @@ abstract class AbstractGateway extends OmnipayAbstractGateway
             'proxyLogin' => '',
             'proxyPassword' => '',
             'contractNumber' => '',
-            'testMode' => true,
+            'testMode' => false,
         );
     }
 
@@ -193,7 +193,7 @@ abstract class AbstractGateway extends OmnipayAbstractGateway
             'connection_timeout' => 5,
         );
 
-        if ($this->getProxyHost()) {
+        if (strlen($this->getProxyHost()) > 1) {
             $header['proxy_host'] = $this->getProxyHost();
             $header['proxy_port'] = $this->getProxyPort();
             $header['proxy_login'] = $this->getProxyLogin();

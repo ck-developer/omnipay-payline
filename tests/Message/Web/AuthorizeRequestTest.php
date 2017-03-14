@@ -37,7 +37,7 @@ class AuthorizeRequestTest extends MessageTestCase
     {
         $this->request->initialize(array(
             'contractNumber' => '1234567',
-            'transactionReference' => $ref = sprintf('ORDER_%s', rand(1, 100)),
+            'transactionId' => $ref = sprintf('ORDER_%s', rand(1, 100)),
             'amount' => '300.00',
             'currency' => 'EUR',
             'paymentMode' => 'NX',

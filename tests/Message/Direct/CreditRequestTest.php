@@ -37,7 +37,7 @@ class CreditRequestTest extends MessageTestCase
     {
         $this->request->initialize(array(
             'contractNumber' => '1234567',
-            'transactionReference' => $ref = sprintf('ORDER_%s', rand(1, 100)),
+            'transactionid' => $ref = sprintf('ORDER_%s', rand(1, 100)),
             'amount' => '300.00',
             'currency' => 'EUR',
             'date' => $date = new \DateTime(),
