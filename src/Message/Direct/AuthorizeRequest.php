@@ -12,6 +12,7 @@
 namespace Omnipay\Payline\Message\Direct;
 
 use Omnipay\Payline\Message\AbstractRequest;
+use DateTime;
 
 /**
  * AuthorizeRequest.
@@ -89,7 +90,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function getDate()
     {
-        return $this->getParameter('date');
+        return $this->getParameter('date') ?: date_create()->format('d/m/Y H:i');
     }
 
     /**
@@ -125,7 +126,7 @@ class AuthorizeRequest extends AbstractRequest
         }
 
         $data['order'] = array(
-            'ref' => $this->getTransactionReference(),
+            'ref' => $this->getTransactionId(),
             'amount' => $this->getAmountInteger(),
             'currency' => $this->getCurrencyNumeric(),
         );
@@ -154,8 +155,7 @@ class AuthorizeRequest extends AbstractRequest
                 'zipCode' => $card->getShippingPostcode(),
                 'state' => $card->getShippingState(),
                 'country' => $card->getShippingCountry(),
-                'phone' => $card->getShippingPhone(),
-                'phoneType' => $card->getShippingPhoneExtension(),
+                'phone' => $card->getShippingPhone()
             ),
             'billingAddress' => array(
                 'title' => $card->getBillingTitle(),
@@ -168,10 +168,16 @@ class AuthorizeRequest extends AbstractRequest
                 'zipCode' => $card->getBillingPostcode(),
                 'state' => $card->getBillingState(),
                 'country' => $card->getBillingCountry(),
-                'phone' => $card->getBillingPhone(),
-                'phoneType' => $card->getBillingPhoneExtension(),
+                'phone' => $card->getBillingPhone()
             ),
         );
+        // Omnipay-common < 2.5 do not have the following methods
+        if ( method_exists($card, 'getShippingPhoneExtension') ) {
+            $data['buyer']['shippingAdress']['phoneType'] =
+                $card->getShippingPhoneExtension();
+            $data['buyer']['billingAddress']['phoneType'] =
+                $card->getBillingPhoneExtension();
+        }
 
         $data['order']['date'] = $this->getDate();
 

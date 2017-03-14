@@ -28,13 +28,13 @@ class CaptureRequest extends AuthorizeRequest
 
     public function getData()
     {
-        $data['transactionID'] = $this->getTransactionId();
+        $data['transactionID'] = $this->getTransactionReference();
 
         $data['payment'] = array(
             'amount' => $this->getAmountInteger(),
             'currency' => $this->getCurrencyNumeric(),
             'action' => 201,
-            'mode' => $this->getPaymentMethod(),
+            'mode' => $this->getPaymentMode() ?: 'CPT',
         );
 
         if ($this->getContractNumber()) {

@@ -40,7 +40,7 @@ class DirectGatewayTest extends GatewayTestCase
 
         /** @var \Omnipay\Payline\Message\Direct\AuthorizeResponse $response */
         $response = $this->gateway->authorize(array(
-            'transactionReference' => sprintf('ORDER_%s', rand(1, 100)),
+            'transactionId' => sprintf('ORDER_%s', rand(1, 100)),
             'amount' => '33.00',
             'currency' => 'EUR',
             'date' => new \DateTime(),
@@ -56,7 +56,7 @@ class DirectGatewayTest extends GatewayTestCase
 
         /** @var \Omnipay\Payline\Message\Direct\AuthorizeResponse $response */
         $response = $this->gateway->authorize(array(
-            'transactionReference' => sprintf('ORDER_%s', rand(1, 100)),
+            'transactionId' => sprintf('ORDER_%s', rand(1, 100)),
             'amount' => '33.00',
             'currency' => 'EUR',
             'date' => new \DateTime(),
@@ -76,7 +76,7 @@ class DirectGatewayTest extends GatewayTestCase
         $this->mockHttpClientMethodFromFile('doCapture', 'CaptureSuccess');
 
         $response = $this->gateway->capture(array(
-            'transactionId' => '27067232451362',
+            'transactionReference' => '27067232451362',
             'amount' => '33.00',
             'currency' => 'EUR',
             'date' => new \DateTime(),
@@ -96,7 +96,7 @@ class DirectGatewayTest extends GatewayTestCase
         $this->mockHttpClientMethodFromFile('doCapture', 'CaptureFailure');
 
         $response = $this->gateway->capture(array(
-            'transactionId' => '',
+            'transactionReference' => '',
             'amount' => '33.00',
             'currency' => 'EUR',
             'date' => new \DateTime(),
@@ -116,7 +116,7 @@ class DirectGatewayTest extends GatewayTestCase
         $this->mockHttpClientMethodFromFile('doRefund', 'RefundSuccess');
 
         $response = $this->gateway->refund(array(
-            'transactionId' => '27067232451362',
+            'transactionReference' => '27067232451362',
             'amount' => '10.00',
             'currency' => 'EUR',
         ))->send();
@@ -129,7 +129,7 @@ class DirectGatewayTest extends GatewayTestCase
         $this->mockHttpClientMethodFromFile('doRefund', 'RefundFailure');
 
         $response = $this->gateway->refund(array(
-            'transactionId' => '27068165254877',
+            'transactionReference' => '27068165254877',
             'amount' => '10.00',
             'currency' => 'EUR',
         ))->send();
