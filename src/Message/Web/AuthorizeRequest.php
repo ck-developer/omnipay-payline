@@ -120,7 +120,7 @@ class AuthorizeRequest extends AbstractRequest
         }
 
         $data['order'] = array(
-            'ref' => $this->getTransactionReference(),
+            'ref' => $this->getTransactionId(),
             'amount' => $this->getAmountInteger(),
             'currency' => $this->getCurrencyNumeric(),
         );

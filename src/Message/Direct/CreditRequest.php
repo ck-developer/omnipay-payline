@@ -47,7 +47,7 @@ class CreditRequest extends AuthorizeRequest
         }
 
         $data['order'] = array(
-            'ref' => $this->getTransactionReference(),
+            'ref' => $this->getTransactionId(),
             'amount' => $this->getAmountInteger(),
             'currency' => $this->getCurrencyNumeric(),
         );

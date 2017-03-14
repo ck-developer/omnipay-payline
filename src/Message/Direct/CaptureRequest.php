@@ -28,7 +28,7 @@ class CaptureRequest extends AuthorizeRequest
 
     public function getData()
     {
-        $data['transactionID'] = $this->getTransactionId();
+        $data['transactionID'] = $this->getTransactionReference();
 
         $data['payment'] = array(
             'amount' => $this->getAmountInteger(),
