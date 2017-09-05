@@ -178,6 +178,8 @@ abstract class AbstractRequest extends OmnipayAbstractRequest
     {
         $data = array(
             'payment' => array('contractNumber' => $this->getContractNumber()),
+            'bankAccountData' => array(),
+            'version' => 5,
         );
 
         return $data;

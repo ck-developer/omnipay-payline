@@ -42,6 +42,6 @@ class MessageTestCase extends TestCase
             throw new \RuntimeException(sprintf('class %s not exist', $class));
         }
 
-        return new $class($this->getMockFromWsdl('http://www.payline.com/wsdl/v4_0/production/DirectPaymentAPI.wsdl'), $this->getHttpRequest());
+        return new $class($this->getMockFromWsdl('https://services.payline.com/V4/services/DirectPaymentAPI?wsdl'), $this->getHttpRequest());
     }
 }

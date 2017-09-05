@@ -25,7 +25,7 @@ class DirectGateway extends AbstractGateway
 
     public function getEndpoint()
     {
-        return ($this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint).'/DirectPaymentAPI.wsdl';
+        return ($this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint).'/DirectPaymentAPI';
     }
 
     /**

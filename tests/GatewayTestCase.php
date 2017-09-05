@@ -98,7 +98,10 @@ class GatewayTestCase extends \Omnipay\Tests\GatewayTestCase
         $httpClient->setAccessible('true');
 
         if (null === $httpClient->getValue($this->gateway)) {
-            $httpClient->setValue($this->gateway, $this->getMockFromWsdl($this->gateway->getEndPoint()));
+            $httpClient->setValue(
+                $this->gateway,
+                $this->getMockFromWsdl("{$this->gateway->getEndPoint()}?wsdl")
+            );
         }
 
         /** @var \PHPUnit_Framework_MockObject_MockObject $client */

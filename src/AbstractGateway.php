@@ -21,8 +21,8 @@ use Omnipay\Common\AbstractGateway as OmnipayAbstractGateway;
  */
 abstract class AbstractGateway extends OmnipayAbstractGateway
 {
-    protected $liveEndpoint = 'http://www.payline.com/wsdl/v4_0/production';
-    protected $testEndpoint = 'http://www.payline.com/wsdl/v4_0/homologation';
+    protected $liveEndpoint = 'https://services.payline.com/V4/services';
+    protected $testEndpoint = 'https://homologation.payline.com/V4/services';
 
     /**
      * AbstractGateway constructor.
@@ -190,7 +190,9 @@ abstract class AbstractGateway extends OmnipayAbstractGateway
             'password' => $this->getAccessKey(),
             'style' => defined(SOAP_DOCUMENT) ? SOAP_DOCUMENT : 2,
             'use' => defined(SOAP_LITERAL) ? SOAP_LITERAL : 2,
-            'connection_timeout' => 5,
+	        'connection_timeout' => 5,
+	        'version' => 'Omnipay Payline v2 - WSDL v4.49',
+	        'user_agent' => "PHP\r\nversion: Omnipay Payline v2 - WSDL v4.49",
         );
 
         if (strlen($this->getProxyHost()) > 1) {
@@ -200,9 +202,9 @@ abstract class AbstractGateway extends OmnipayAbstractGateway
             $header['proxy_password'] = $this->getProxyPassword();
         }
 
-        ini_set('user_agent', 'Omnipay Payline');
-
-        return new \SoapClient($this->getEndPoint(), $header);
+	$client = new \SoapClient("{$this->getEndPoint()}?wsdl", $header);
+	$client->__setLocation($this->getEndPoint());
+	return $client;
     }
 
     protected function createRequest($class, array $parameters)

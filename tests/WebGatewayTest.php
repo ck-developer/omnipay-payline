@@ -28,10 +28,10 @@ class WebGatewayTest extends GatewayTestCase
     public function testEndpoint()
     {
         $this->gateway->setTestMode(false);
-        $this->assertSame('http://www.payline.com/wsdl/v4_0/production/WebPaymentAPI.wsdl', $this->gateway->getEndpoint());
+        $this->assertSame('https://services.payline.com/V4/services/WebPaymentAPI', $this->gateway->getEndpoint());
 
         $this->gateway->setTestMode(true);
-        $this->assertSame('http://www.payline.com/wsdl/v4_0/homologation/WebPaymentAPI.wsdl', $this->gateway->getEndpoint());
+        $this->assertSame('https://homologation.payline.com/V4/services/WebPaymentAPI', $this->gateway->getEndpoint());
     }
 
     public function testAuthorize()
