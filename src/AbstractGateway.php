@@ -202,9 +202,9 @@ abstract class AbstractGateway extends OmnipayAbstractGateway
             $header['proxy_password'] = $this->getProxyPassword();
         }
 
-	$client = new \SoapClient("{$this->getEndPoint()}?wsdl", $header);
-	$client->__setLocation($this->getEndPoint());
-	return $client;
+        $client = new \SoapClient("{$this->getEndPoint()}?wsdl", $header);
+        $client->__setLocation($this->getEndPoint());
+        return $client;
     }
 
     protected function createRequest($class, array $parameters)
