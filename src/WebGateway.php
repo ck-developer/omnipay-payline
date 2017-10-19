@@ -43,7 +43,7 @@ class WebGateway extends AbstractGateway
      */
     public function getEndpoint()
     {
-        return ($this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint).'/WebPaymentAPI.wsdl';
+        return ($this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint).'/WebPaymentAPI';
     }
 
     /**
