@@ -20,7 +20,7 @@ use Omnipay\Common\Message\AbstractResponse as OmnipayAbstractResponse;
  */
 abstract class AbstractResponse extends OmnipayAbstractResponse
 {
-    const SUCCESSFUL_CODE = '0000';
+    const SUCCESSFUL_CODE = '00000';
 
     public function isSuccessful()
     {
