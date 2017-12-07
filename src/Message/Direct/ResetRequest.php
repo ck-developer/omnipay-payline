@@ -6,7 +6,7 @@
  * @link      https://github.com/ck-developer/omnipay-payline
  * @package   omnipay-payline
  * @license   MIT
- * @copyright Copyright (c) 2016 - 217 Claude Khedhiri <claude@khedhiri.com>
+ * @copyright Copyright (c) 2017 eric ramahatra
  */
 
 namespace Omnipay\Payline\Message\Direct;
