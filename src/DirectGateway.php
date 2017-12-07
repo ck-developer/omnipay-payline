@@ -71,7 +71,7 @@ class DirectGateway extends AbstractGateway
     /**
      * @param array $parameters
      *
-     * @return \Omnipay\Payline\Message\Direct\RefundRequest
+     * @return \Omnipay\Payline\Message\Direct\ResetRequest
      */
     public function reset(array $parameters = array())
     {

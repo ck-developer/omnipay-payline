@@ -12,7 +12,7 @@
 namespace Omnipay\Payline\Message\Direct;
 
 /**
- * RefundResponse.
+ * ResetResponse.
  *
  * @author Eric Ramahatra
  */

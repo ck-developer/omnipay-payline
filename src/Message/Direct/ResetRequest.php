@@ -12,9 +12,9 @@
 namespace Omnipay\Payline\Message\Direct;
 
 /**
- * CaptureRequest.
+ * ResetRequest.
  *
- * @method RefundResponse send()
+ * @method ResetResponse send()
  *
  * @author Eric Ramahatra
  */
@@ -41,10 +41,10 @@ class ResetRequest extends AuthorizeRequest
     /**
      * @param \stdClass $data
      *
-     * @return RefundResponse
+     * @return ResetResponse
      */
     protected function createResponse($data)
     {
-        return $this->response = new RefundResponse($this, $data);
+        return $this->response = new ResetResponse($this, $data);
     }
 }
