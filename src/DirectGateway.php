@@ -73,7 +73,7 @@ class DirectGateway extends AbstractGateway
      *
      * @return \Omnipay\Payline\Message\Direct\ResetRequest
      */
-    public function reset(array $parameters = array())
+    public function void(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Payline\Message\Direct\ResetRequest', $parameters);
     }
